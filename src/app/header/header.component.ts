@@ -10,5 +10,14 @@ import { Component} from '@angular/core';
 export class HeaderComponent {
     title:string="Netflix"
     isAvaliable:boolean=true
+    inputvalue:string='ali'
+    value:boolean=false
   constructor() { }
+  sayhello(){
+    alert("welcome to my app");
+  }
+  printLogo(){
+    console.log(this.title);
+    
+  }
 }
