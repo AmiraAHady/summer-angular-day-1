@@ -1,0 +1,52 @@
+<div class="movie-ticket">
+  <div class="container-fluid">
+    <!-- Item -->
+    <div class="ui-item">
+      <!-- Head -->
+      <div class="ui-head">
+        <!-- Background Image -->
+        <img
+          src="https://img.freepik.com/premium-photo/yellow-gradient-background_64749-3725.jpg"
+          alt=""
+          class="img-responsive bg-img"
+        />
+        <!-- Transparent Background -->
+        <div class="ui-trans clearfix">
+          <!-- Image -->
+          <img
+            [src]="basepath + selectedmovie?.poster_path"
+            alt=""
+            class="img-responsive"
+          />
+          <!-- Details -->
+          <div class="ui-details clearfix">
+            <!-- Movie Name -->
+            <h2><a href="#">{{selectedmovie?.title}}</a></h2>
+            <!-- Labels -->
+            <!-- Paragraph -->
+            <p>
+              {{selectedmovie?.overview}}
+            </p>
+            <!-- Heading -->
+          </div>
+        </div>
+      </div>
+      <!-- Review -->
+      <div class="ui-review">
+        <!-- Heading -->
+        <h3>{{selectedmovie?.title}}</h3>
+        <!-- Paragraph -->
+        <p>
+         {{selectedmovie?.overview}}
+        </p>
+        <!-- Buttons -->
+        <a href="#" class="ui-btn bg-red"
+          ><i class="fa fa-ticket"></i> Buy Tickets</a
+        >
+        <a href="#" class="ui-btn bg-green"
+          ><i class="fa fa-dot-circle-o"></i> Buy DVDs</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

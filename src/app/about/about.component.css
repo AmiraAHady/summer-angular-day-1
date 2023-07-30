@@ -1,0 +1,373 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-light: #dae1e7;
+}
+
+html,
+body {
+	font-family: League Spartan;
+	background: var(--color-light);
+	overflow: hidden;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Header */
+
+.header {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background: linear-gradient(225deg, #112b3c 40%, #1c4b82 100%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header .content {
+	position: relative;
+	display: flex;
+	height: 100%;
+	width: 70%;
+	justify-content: center;
+	flex-direction: column;
+	color: var(--color-light);
+	max-width: 1000px;
+}
+
+.header .content span {
+	background: linear-gradient(180deg, #f06449 30%, #ef3636 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.header .content p {
+	color: #dae1e7;
+	font-family: Cabin Condensed;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+
+.header hr {
+	width: 72px;
+	height: 2px;
+	flex-shrink: 0;
+	background: var(--color-light);
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.header .title {
+	z-index: 1;
+}
+
+.header .logo {
+	position: absolute;
+	right: 0;
+	z-index: 0;
+}
+
+.bbg {
+	background: linear-gradient(225deg, #112b3c 30%, #1c4b82 100%);
+	color: white;
+}
+
+.cbg {
+	background: linear-gradient(225deg, #ef3636 0%, #f06449 100%);
+	color: white;
+}
+
+.lbg {
+	background: #dae1e7;
+	color: #253e4e;
+}
+
+.dbg {
+	/* background: #112b3c; */
+	color: white;
+}
+
+h1 {
+	font-size: 70px;
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 56px;
+	font-weight: 900;
+}
+
+h3 {
+	font-size: 42px;
+	font-weight: 900;
+}
+
+h4 {
+	font-size: 36px;
+	font-weight: 700;
+}
+
+h5 {
+	font-size: 26px;
+	font-weight: 700;
+}
+
+h6 {
+	color: rgba(239, 54, 54, 0.9);
+	text-align: justify;
+	font-family: Cabin Condensed;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 16px;
+}
+
+/* Modal */
+
+.modal {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 9999;
+	transition: 0.3s;
+	justify-content: center;
+	align-items: center;
+	display: none;
+}
+
+.modal.active {
+	display: flex;
+}
+
+.modal.close {
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.modal .groups {
+	position: relative;
+	height: 90vh;
+	width: 90vw;
+	max-width: 1100px;
+	display: flex;
+	justify-content: center;
+}
+
+.modal .groups .group-1,
+.modal .groups .group-2 {
+	position: relative;
+	width: 50%;
+	background: #dae1e7;
+	box-shadow: 5px 5px 50px 0px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+}
+
+.modal.active .groups .group-1 {
+	animation: groupe-1 0.5s ease-in-out both;
+}
+
+.modal.active .groups .group-2 {
+	animation: groupe-2 0.5s 0.2s ease-in-out both;
+}
+
+@keyframes groupe-1 {
+	0% {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes groupe-2 {
+	0% {
+		-webkit-transform: translateY(100%);
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.modal .groups .group-2 .close-section {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: -50px;
+}
+
+.about-picture {
+	position: relative;
+	height: 70%;
+	width: 70%;
+	margin-bottom: 9.5%;
+	background-image: url(https://img.freepik.com/photos-gratuite/portrait-homme-riant_23-2148859448.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.frame-picture {
+	position: absolute;
+	top: 15.5%;
+	left: 20%;
+	height: 70%;
+	width: 70%;
+	border-radius: 0px 0px 20px 0px;
+	border: 3px solid #ef3636;
+}
+
+.close-section .close-container {
+	position: relative;
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+}
+
+.close-section .close-container .leftright {
+	height: 4px;
+	width: 50px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: #dae1e7;
+	border-radius: 2px;
+	transform: rotate(45deg);
+	transition: all 0.3s ease-in;
+}
+
+.close-section .close-container .rightleft {
+	height: 4px;
+	width: 50px;
+	position: absolute;
+	margin-top: 24px;
+	background-color: #dae1e7;
+	border-radius: 2px;
+	transform: rotate(-45deg);
+	transition: all 0.3s ease-in;
+}
+
+.close-section .close-container label {
+	color: white;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.6em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 0.3s ease-in;
+	opacity: 0;
+}
+
+.close-section .close-container .close {
+	margin: 60px 0 0 0;
+	position: absolute;
+}
+
+.close-section .close-container:hover .leftright {
+	transform: rotate(-45deg);
+	background-color: #ef3636;
+}
+
+.close-section .close-container:hover .rightleft {
+	transform: rotate(45deg);
+	background-color: #ef3636;
+}
+
+.close-section .close-container:hover label {
+	opacity: 1;
+}
+
+.modal.active .groups .layer-1,
+.modal.active .groups .layer-2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: 0.8s;
+}
+
+.layer-content {
+	padding: 90px;
+}
+
+.modal.active .groups .group-2 .layer-1 {
+	z-index: 999;
+}
+
+.modal.active.switched .groups .group-2 .layer-1 {
+	transform: translateX(-100%);
+}
+
+.modal.active .groups .layer-content p {
+	text-align: justify;
+}
+
+/* Formulaire */
+
+.form-group {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+input,
+textarea {
+	font-family: Cabin Condensed;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: none;
+	border-bottom: 1px solid #dae1e7;
+	outline: none;
+	font-size: 16px;
+	background: transparent;
+	color: #dae1e7;
+	width: 100%;
+	resize: vertical;
+}
+
+label {
+	position: absolute;
+	font-family: Cabin Condensed;
+	top: 10px;
+	left: 0px;
+	pointer-events: none;
+	transition: 0.2s ease all;
+	color: #dae1e750;
+}
+
+input:focus + label,
+textarea:focus + label,
+input.filled + label,
+textarea.filled + label {
+	top: -10px;
+	font-size: 12px;
+	color: #dae1e730;
+}
+
+input:valid + label {
+	top: -10px;
+	font-size: 12px;
+	color: #dae1e730;
+}

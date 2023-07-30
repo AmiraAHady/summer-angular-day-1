@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="card movie_card col-lg-4 mt-3" *ngFor="let tvshow of allTvShows">
+      <img [src]="basepath+tvshow.poster_path" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ tvshow.name | mycustom }}</h5>
+        <span class="movie_info">{{ tvshow.first_air_date | date}}</span>
+        <!-- <p>{{movie.overview | lowercase}}</p> -->
+        <!-- <button class="btn btn-success d-block" [disabled]="myMovie1.notValiable">Watch</button>
+        <button class="btn btn-primary d-block" *ngIf="myMovie1.inStock">Add to Cart</button> -->
+      </div>
+    </div>
+    
+    
+  </div>

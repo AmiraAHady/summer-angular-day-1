@@ -16,19 +16,19 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active" (mouseover)="printLogo()">
-            <a class="nav-link" aria-current="page" href="#"> {{title}}</a>
+            <a class="nav-link" aria-current="page" routerLink="/movies"> {{title}}</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Movies</a>
+            <a class="nav-link" routerLink="/movies">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link" routerLink="/tvshow">TvShows</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" routerLink="/about">About</a>
           </li>
         </ul>
       </div>
@@ -37,20 +37,10 @@
   <!-- Navbar -->
 
   <!-- Jumbotron -->
-  <div class="p-5 text-center bg-light">
-    <h1 class="mb-3">Streaming websit</h1>
-    <h3 class="mb-3">watch Free movies and tv shows</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat..
-    </p>
-    <button class="btn btn-warning" (click)="sayhello()">get your welcome </button>
-  </div>
+  
   <!-- Jumbotron -->
-  <input type="text" class="form-control" id="usr" [(ngModel)]="inputvalue">
-  <h2>{{inputvalue}}</h2>
+  <!-- <input type="text" class="form-control" id="usr" [(ngModel)]="inputvalue">
+  <h2>{{inputvalue}}</h2> -->
 
-<div *ngIf="value">Content to render when condition is true.</div>
+<!-- <div *ngIf="value">Content to render when condition is true.</div> -->
 </header>

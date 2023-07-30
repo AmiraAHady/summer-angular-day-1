@@ -9,6 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { MoviesComponent } from './movies/movies.component';
 import { MycustomPipe } from './mycustom.pipe';
+import { TvshowComponent } from './tvshow/tvshow.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { MycustomPipe } from './mycustom.pipe';
     MenuComponent,
     FooterComponent,
     MoviesComponent,
-    MycustomPipe
+    MycustomPipe,
+    TvshowComponent,
+    HomeComponent,
+    AboutComponent,
+    PagenotfoundComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
