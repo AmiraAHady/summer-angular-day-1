@@ -7,8 +7,11 @@
         alt="..."
       />
       <div class="card-body">
-        <h5 class="card-title">{{ movie.title | mycustom }}</h5>
+        <h5 class="card-title">{{ movie.title| mycustom }}</h5>
         <span class="movie_info">{{ movie.release_date | date }}</span>
+        <p>{{movie.vote_average/2}}</p>
+        <app-movie-rating [rating]="movie.vote_average"  (dataFromChildEvent)="handelChildMsg($event)"></app-movie-rating>
+        
         <!-- <p>{{movie.overview | lowercase}}</p> -->
         <!-- <button class="btn btn-success d-block" [disabled]="myMovie1.notValiable">Watch</button>
         <button class="btn btn-primary d-block" *ngIf="myMovie1.inStock">Add to Cart</button> -->
@@ -16,3 +19,4 @@
     </div>
   </div>
 </div>
+

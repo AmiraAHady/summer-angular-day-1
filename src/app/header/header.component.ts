@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 //decorator
 @Component(
   {
@@ -7,12 +7,20 @@ import { Component} from '@angular/core';
     styleUrls: ['./header.component.css',]
   }
 )
-export class HeaderComponent {
+export class HeaderComponent  implements OnInit{
     title:string="Netflix"
     isAvaliable:boolean=true
     inputvalue:string='ali'
     value:boolean=false
-  constructor() { }
+  constructor() { 
+    console.log('inside header constructor');
+    
+  }
+  ngOnInit(): void {
+    console.log("inside header ng on init");
+    
+  }
+
   sayhello(){
     alert("welcome to my app");
   }

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieRatingComponent } from './movie-rating/movie-rating.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
     HomeComponent,
     AboutComponent,
     PagenotfoundComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    MovieRatingComponent
   ],
   imports: [
     BrowserModule,
