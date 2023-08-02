@@ -21,11 +21,13 @@
           <!-- Details -->
           <div class="ui-details clearfix">
             <!-- Movie Name -->
-            <h2><a href="#">{{selectedmovie?.title}}</a></h2>
+            <h2>
+              <a href="#">{{ selectedmovie?.title }}</a>
+            </h2>
             <!-- Labels -->
             <!-- Paragraph -->
             <p>
-              {{selectedmovie?.overview}}
+              {{ selectedmovie?.overview }}
             </p>
             <!-- Heading -->
           </div>
@@ -34,11 +36,23 @@
       <!-- Review -->
       <div class="ui-review">
         <!-- Heading -->
-        <h3>{{selectedmovie?.title}}</h3>
+        <h3>{{ selectedmovie?.title }}</h3>
         <!-- Paragraph -->
         <p>
-         {{selectedmovie?.overview}}
+          {{ selectedmovie?.overview }}
         </p>
+
+        <!-- <mat-chip-listbox aria-label="Fish selection"> -->
+        <div class="row">
+          <p
+            class="col badge bg-warning ourdisplay m-2"
+            *ngFor="let genre of moviesGenres"
+          >
+            {{ genre.name }}
+          </p>
+        </div>
+
+        <!-- </mat-chip-listbox> -->
         <!-- Buttons -->
         <a href="#" class="ui-btn bg-red"
           ><i class="fa fa-ticket"></i> Buy Tickets</a

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MoviesServiceService } from '../movies-service.service';
 
+
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.component.html',
@@ -12,20 +13,21 @@ export class MovieDetailsComponent implements OnInit {
   basepath = 'https://image.tmdb.org/t/p/w780';
   selectedmovie!:any;
   selectedMovieId: any = '';
+  moviesGenres:any[]=[];
   
   constructor(public myRouts: ActivatedRoute,public myMoviesSer:MoviesServiceService) {
-    // this.selectedMovieId = this.myRouts.snapshot.paramMap.get('id');
-    // for (const element of this.allMovies) {
-    //   if (element.id == this.selectedMovieId) {
-    //     this.selectedmovie = element;
-    //   } 
-    // }
-
-    // console.log(this.selectedmovie);
   }
   ngOnInit(): void {
     this.selectedMovieId = this.myRouts.snapshot.paramMap.get('id');
-    this.selectedmovie =  this.myMoviesSer.getMovieById(this.selectedMovieId);
+    this.myMoviesSer.getMovieById(this.selectedMovieId).subscribe({
+      next:(singleMovie)=>{
+        this.selectedmovie=singleMovie;
+        this.moviesGenres=singleMovie.genres;
+        console.log(singleMovie.genres);
+        
+      }
+    });
+   
    
   }
   

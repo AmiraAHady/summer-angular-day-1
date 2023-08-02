@@ -220,4 +220,7 @@ body{
 	padding-right: 7px;
 	margin-right: 3px;
 }
-                          
+   
+.ourdisplay{
+	display: inline-block;
+}

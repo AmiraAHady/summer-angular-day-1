@@ -1,3 +1,13 @@
+
+ <div>
+  <button type="button" class="btn btn-primary float-end mb-5" (click)="toggleLang()">{{lang=="ar-SA"?'English':'Arabic'}}</button>
+ </div>
+<div>
+  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+  [(ngModel)]="searchValue"
+  >
+</div>
+
 <div class="row">
   <div class="card movie_card col-lg-4 mt-3" *ngFor="let movie of allMovies">
     <div [routerLink]="['/moviesDetails',movie.id]">
@@ -19,4 +29,10 @@
     </div>
   </div>
 </div>
+<hr>
+<mat-paginator [length]="totalPages"
+              [pageSize]="20"
+              aria-label="Select page"
+              (page)="changePage($event)">
+</mat-paginator>
 
