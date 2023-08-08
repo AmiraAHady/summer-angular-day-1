@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from  '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +21,8 @@ import { AboutComponent } from './about/about.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieRatingComponent } from './movie-rating/movie-rating.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,9 @@ import { MovieRatingComponent } from './movie-rating/movie-rating.component';
     AboutComponent,
     PagenotfoundComponent,
     MovieDetailsComponent,
-    MovieRatingComponent
+    MovieRatingComponent,
+    ProductListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ import { MovieRatingComponent } from './movie-rating/movie-rating.component';
     FormsModule,
     HttpClientModule,
     MatPaginatorModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

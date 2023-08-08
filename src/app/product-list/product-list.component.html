@@ -1,0 +1,26 @@
+<div class="row">
+  <div
+    class="card movie_card col-lg-4 mt-3"
+    *ngFor="let product of allProducts"
+  >
+    <div [routerLink]="['/productDetails', product.id]">
+    <img [src]="product.image" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.title }}</h5>
+      <h4 class="movie_info">{{ product.price | currency }}</h4>
+      <!-- <span class="movie_info">{{ product.description }}</span> -->
+    </div>
+  </div>
+</div>
+</div>
+<hr />
+<div class="row">
+    <mat-paginator [length]="totalItems"
+    [pageSize]="pageSize" 
+    [pageSizeOptions]="listofpageSize"
+    aria-label="Select page"
+    (page)="changePage($event)">
+</mat-paginator>
+</div>
+
+

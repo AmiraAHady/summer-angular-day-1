@@ -7,18 +7,18 @@ import { IMovie } from './movies/IMovie';
   providedIn: 'root',
 })
 export class MoviesServiceService {
-  api_key = '';
+  api_key = '0ab69d58b9382bc390a939b7dbbe713b';
   urlBase = 'https://api.themoviedb.org/3';
   constructor(public http: HttpClient) {}
 
   getAllMovies(lang:string,pageNamber:number=1): Observable<any> {
-    // return this.http.get(
-    //   `${this.urlBase}/movie/now_playing?api_key=${this.api_key}&page=${pageNamber}&language=${lang}`
-    // );
     return this.http.get(
-      `${this.urlBase}/discover/movie?api_key=${this.api_key}&page=${pageNamber}&language=${lang}&with_origin_country=US`
+      `${this.urlBase}/movie/now_playing?api_key=${this.api_key}&page=${pageNamber}&language=${lang}`
     );
-    
+    // return this.http.get(
+    //   `${this.urlBase}/discover/movie?api_key=${this.api_key}&page=${pageNamber}&language=${lang}&with_origin_country=US`
+    // );
+   
   }
 
   getMovieById(movieId: number): Observable<any> {

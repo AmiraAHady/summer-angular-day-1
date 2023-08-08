@@ -19,7 +19,7 @@ export class MovieRatingComponent implements OnChanges {
   clipWidth: number = 0;
   constructor() {}
   ngOnChanges(): void {
-    this.clipWidth = (this.rating * 75) / 10;
+    this.clipWidth = (this.rating * 75) / 5;
   }
   onDataPassed(){
     //hello from your child with rating
