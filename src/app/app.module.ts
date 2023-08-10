@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from  '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -23,6 +24,10 @@ import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieRatingComponent } from './movie-rating/movie-rating.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +44,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     MovieDetailsComponent,
     MovieRatingComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    CartComponent,
+    OrderComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +56,9 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     FormsModule,
     HttpClientModule,
     MatPaginatorModule,
-    BrowserAnimationsModule
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<form (submit)="onSignUp(signupForm)" #signupForm="ngForm">
+  <div class="form-group">
+    <label>userName:</label>
+    <input type="text" name="userName" ngModel class="form-control" placeholder="UserName" #userNameInput="ngModel"  required />
+    <p class="form-text text-danger" *ngIf="userNameInput.invalid" >Please Enter valid UserName</p>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email"  name="userEmail" ngModel class="form-control" placeholder="Enter email" #userEmailInput="ngModel"  required email/>
+    <p class="form-text text-danger" *ngIf="userEmailInput.invalid" >Please Enter valid Email</p>
+  </div>
+  <div class="form-group">
+    <label>Password</label>
+    <input type="password" name="userPassword" ngModel class="form-control" placeholder="Password" #userPasswordInput="ngModel" required/>
+    <p class="form-text text-danger" *ngIf="userPasswordInput.invalid" >passwoed at least 5 characters</p>
+  </div>
+  <button type="submit" class="btn btn-primary">SignUp</button>
+</form>

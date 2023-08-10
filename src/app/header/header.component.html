@@ -16,7 +16,9 @@
       <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active" (click)="printLogo()">
-            <a class="nav-link" aria-current="page" routerLink="/movies"> {{title}}</a>
+            <a class="nav-link" aria-current="page" routerLink="/movies">
+              {{ title }}</a
+            >
           </li>
           <li class="nav-item active">
             <a class="nav-link" aria-current="page" routerLink="/home">Home</a>
@@ -33,6 +35,21 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/about">About</a>
           </li>
+          <!-- orders -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/orders">My Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cart"
+              ><i class="fa fa-cart-plus float-end"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/signup">signUp</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,10 +57,10 @@
   <!-- Navbar -->
 
   <!-- Jumbotron -->
-  
+
   <!-- Jumbotron -->
   <!-- <input type="text" class="form-control" id="usr" [(ngModel)]="inputvalue">
   <h2>{{inputvalue}}</h2> -->
 
-<!-- <div *ngIf="value">Content to render when condition is true.</div> -->
+  <!-- <div *ngIf="value">Content to render when condition is true.</div> -->
 </header>

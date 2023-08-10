@@ -1,0 +1,30 @@
+<!-- <mat-spinner mode="indeterminate" style="background-color: blue;" *ngIf="!isDataCome" ></mat-spinner> -->
+<div class="d-flex justify-content-center" *ngIf="!isDataCome">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<div class="row" *ngIf="cartItems.length>0">
+  <div class="card movie_card col-lg-12 mt-3" *ngFor="let item of cartItems">
+    <div class="row">
+      <div class="col-2">
+        <img class="m-3" [src]="item.image" alt="..." width="100" height="50" />
+      </div>
+      <div class="card-body col-10">
+        <h5 class="card-title">{{ item.title }}</h5>
+        <h4 class="movie_info">quantity: {{ item.quantity }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="cartItems.length>0">
+  <button class="btn btn-success" (click)="addOrder()">Place Order</button>
+</div>
+<div class="row" *ngIf="cartItems.length==0">
+  <h3>No Items add to Cart Yet!</h3>
+  <button class="btn btn-success" (click)="goToshop()">go Shopping</button>
+</div>
+
+

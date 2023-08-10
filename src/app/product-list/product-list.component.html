@@ -4,13 +4,16 @@
     *ngFor="let product of allProducts"
   >
     <div [routerLink]="['/productDetails', product.id]">
-    <img [src]="product.image" class="card-img-top" alt="..." />
+    <img [src]="product.image" class="card-img-top" alt="..." width="300" height="300" />
     <div class="card-body">
       <h5 class="card-title">{{ product.title }}</h5>
       <h4 class="movie_info">{{ product.price | currency }}</h4>
+     
       <!-- <span class="movie_info">{{ product.description }}</span> -->
     </div>
+   
   </div>
+  <button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button>
 </div>
 </div>
 <hr />

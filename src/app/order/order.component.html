@@ -1,0 +1,27 @@
+<div class="row" *ngIf="userOrders.length > 0">
+  <div class="card movie_card col-lg-12 mt-3" *ngFor="let order of userOrders">
+    <div class="row">
+      <p>#order:{{ order._id }}</p>
+      <div *ngFor="let item of order.items">
+        <div class="col-2">
+          <img
+            class="m-3"
+            [src]="item.image"
+            alt="..."
+            width="100"
+            height="50"
+          />
+        </div>
+        <div class="card-body col-10">
+          <h5 class="card-title">{{ item.title }}</h5>
+          <h4 class="movie_info">quantity: {{ item.quantity }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row" *ngIf="userOrders.length == 0 ">
+  <h3>No orders placed Yet!</h3>
+</div>
